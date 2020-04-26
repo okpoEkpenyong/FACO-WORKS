@@ -3,6 +3,7 @@
 [Link to the our project page](https://devpost.com/software/faco-fight-against-corona-jfcza9)
 
 In this repo there are a few files related to our submission:
+* Jupyter notebook that pre-processes the wav files
 * Jupyter notebooks where we set up fastai databunches, neural networks and train them
 * Some code (script and notebook) that attempts to do inference (unfinished)
 * Our exported final model exported from fastai
