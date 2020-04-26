@@ -37,7 +37,7 @@ We will take a machine learning approach to develop highly-accurate algorithms t
 For tracking patients, these technologies will be used-:: Client (Frontend): React (JavaScript + Material-UI) Server (Backend): Blockstack managed backed (user data), Golang (notifications, education) Database: Gaia managed storage (user data), MongoDB (notifications, education) Deployment: Client site deployed on AWS S3 Golang servers deployed on AWS EC2 behind an API Gateway Blockstack/Gaia is managed by Blockstack, not us then through tools, API, and languages such as Java, XML,webrtc (shown in the last pic), google maps, etc, we going to make rest of the functionality of the app.
 We use a variety of Python libraries to help up filter the signal and convert it to a spectrogram. For classification and prediction we set up and traindeep learning artificial network using the fastai library.
 
-##IMPACT
+## IMPACT
 FACO will help patients get themselves tested at home, supporting in areas where tests and access to tests are limited. This will help democratize care in hard-to-reach or resource-strapped areas, and provide peace of mind so that patients will not overwhelm already stressed healthcare systems. Doctors will be able to prioritize patients with an urgent need related to their speciality, providing care from the palm of their hand, limiting their exposure and travel time. 
 
 ## Challenges we ran into
