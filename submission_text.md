@@ -3,7 +3,7 @@ A diagnosis of respiratory disease is one of the most common outcomes of visitin
 
 These audible sounds, used by our app, contain significantly more information than the sounds picked up by a stethoscope. Our approach is automated and removes the need for human interpretation of respiratory sounds. Plus, we can see lots of spreadable diseases nowadays such as HIV, Coronavirus, etc., so we have to track those patients to stop them from spreading the disease.
 
-##PROBLEM STATEMENT
+## PROBLEM STATEMENT
 <ol>
 <li>In this difficult time, a lot of people panic if they have signs of any of the symptoms, and they want to visit the doctor.</li>
 <li>It isn’t necessary for the patients to always visit the doctor, as they might have a normal fever, cold or other condition that does not require immediate medical care. </li>
