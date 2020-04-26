@@ -14,7 +14,7 @@ These audible sounds, used by our app, contain significantly more information th
 ## SOLUTION
 We provide a point of care diagnostic solutions for telehealth that are easily integrated into existing platforms. We are working on an app to provide instant clinical quality diagnostic tests and management tools directly to consumers and healthcare providers. Our app is based on the premise that cough and breathing sounds carry vital information on the state of the respiratory tract. It is created to diagnose and measure the severity of a wide range of chronic and acute diseases such as corona, pneumonia, asthma, bronchiolitis and chronic obstructive pulmonary disease (COPD) using this insight. These audible sounds, used by our app, contain significantly more information than the sounds picked up by a stethoscope. app approach is automated and removes the need for human interpretation of respiratory sounds, plus user disease can also be detected by measuring heart beat from camera of smartphone.
 
-**The application works in following manner:**
+**The application works in the following manner:**
 <ul>
 <li>User downloads the application from the app store and registers himself/herself.</li>
 <li>After creating his/her account, they have to go through a questionnaire describing their symptoms like headache, fever, cough, cold etc. </li>
