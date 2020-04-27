@@ -1,8 +1,8 @@
 """
     Use:
-        inf = CoughInfer('model.pkl', 'directory)
+        learner = get_model('model.pkl', 'directory')
         img = arr2image(array)
-        category, image, probality = inf.predict(img) """
+        category, _, probalities = learner.predict(img) """
 
 from fastai.vision.image import Image
 from fastai.basic_train import load_learner
@@ -20,16 +20,8 @@ def arr2image(arr):
     # return as image
     return Image(data)
 
-class CoughInfer():
-    """ Class that carries out the inference """
-    def __init__(model, dir='.'):
-        """ Initialization, provide exported model file and dir """
-        self.learn = load_learner(dir, model)
-    
-    def predict(img):
-        """ Predicts from image """
-        pred = self.learn.predict(img)
-        # Returns tuple
-        # with category, image and probabilities of each cat
-        return pred
+
+def get_model(model, dir='.'):
+    """ exported model file and dir """
+    return load_learner(dir, model)
 
