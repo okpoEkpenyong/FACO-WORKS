@@ -5,8 +5,8 @@
 In this repo there are a few files related to our submission:
 * Jupyter notebook code that converts wav files into sprectograms
 * Jupyter notebooks where we set up fastai databunches, neural networks and train them
-* A few examples of sprectograms stored as numpy arrays in folde "imgs"
+* A few examples of sprectograms stored as numpy arrays in folder "imgs"
 * Our exported final model exported from fastai
-* Some code (script and example notebook) that infers category from sprectogram
+* Some codes (script and example notebook) that infer category from sprectogram
 * An image with the confusion matrix results for our final model
 * Pitch elevator and whole text for our submission
