@@ -1,9 +1,9 @@
 """
     Use:
         learner = get_model('model.pkl', 'directory')
-        img = arr2image(array)
+        img = arr2image(spectrogram) # spec. is a numpy array
         category, _, probabilities = learner.predict(img)
-        The probability of the prediction is the maximum
+        # The probability of the prediction is the maximum
         of the probabilities vector """
 
 from fastai.vision.image import Image
