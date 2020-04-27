@@ -2,7 +2,9 @@
     Use:
         learner = get_model('model.pkl', 'directory')
         img = arr2image(array)
-        category, _, probalities = learner.predict(img) """
+        category, _, probabilities = learner.predict(img)
+        The probability of the prediction is the maximum
+        of the probabilities vector """
 
 from fastai.vision.image import Image
 from fastai.basic_train import load_learner
