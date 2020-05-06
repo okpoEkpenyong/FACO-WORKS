@@ -2,9 +2,12 @@
     Use:
         learner = get_model('model.pkl', 'directory')
         img = arr2image(spectrogram) # spec. is a numpy array
-        category, _, probabilities = learner.predict(img)
-        # The probability of the prediction is the maximum
-        of the probabilities vector """
+        category, index, probabilities = learner.predict(img)
+        category is the category name as a string
+        index is the index of the category as an integer
+        probabilities is the vector with all probabilities
+        probabilities[index] gives back the prob of the predicted cat
+"""
 
 from fastai.vision.image import Image
 from fastai.basic_train import load_learner
