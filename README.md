@@ -1,4 +1,4 @@
-# Submission at the EUVSVIRUS hackathon
+# Submission at the hackathon
 [Link to the hackathon](https://euvsvirus.org/)
 [Link to the our project page](https://devpost.com/software/faco-fight-against-corona-jfcza9)
 
