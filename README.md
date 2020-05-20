@@ -10,3 +10,4 @@ In this repo there are a few files related to our submission:
 * Some codes (script and example notebook) that infer category from spectrogram
 * An image with the confusion matrix results for our final model
 * Pitch elevator and whole text for our submission
+* Folder remote_heartrate contains a demo web app that takes a video of a face and estimates heart rate. See its README file for details
