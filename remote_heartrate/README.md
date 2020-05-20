@@ -3,3 +3,4 @@ It is based on an algorithm implemented in repo
 https://github.com/rohintangirala/eulerian-remote-heartrate-detection
 
 Run web.py and it'll create an http tunnel where the app runs
+Or use the jupyter notebook heartrate_test

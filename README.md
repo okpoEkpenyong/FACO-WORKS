@@ -11,3 +11,4 @@ In this repo there are a few files related to our submission:
 * An image with the confusion matrix results for our final model
 * Pitch elevator and whole text for our submission
 * Folder remote_heartrate contains a demo web app that takes a video of a face and estimates heart rate. See its README file for details
+* Folder 'Disease model" contains a model that predicts disease from cough audio. See its README file for details
