@@ -7,3 +7,4 @@ This subdirectory is dedicated to respiratory disease classification. It contain
 - An image of the confusion matrix from our VGG19 model
 - The first model produced mediocre results, probably becaue of unbalanced categories, so we tried oversampling techniques, which improved predictions
 - The new confusion matrix lives at 'oversampling.png'
+- Added confusion matrix implementing mixup and oversampling methods. Mixupover image
