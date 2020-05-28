@@ -1,18 +1,15 @@
 import librosa as lb
-from librosa.display import specshow
-import matplotlib.pyplot as plt
+# So we can import from cough_inference
+sys.path.append('../..')
+from cough_inference import arr2image
 
 def convert_to_spec_image(filename):
-
+    """ Takes wav file and converts it to fastai image object """
     y, sr = lb.load(filename)
-    # Plot signal in
-    plt.figure(figsize=(10, 3))
     src_ft = lb.stft(y)
     src_db = lb.amplitude_to_db(abs(src_ft))
-    specshow(src_db, sr=sr, x_axis='time', y_axis='hz')
-    plt.ylim(0, 5000)
-    mel = plt.savefig(filename+ '.png')
-    return mel
+    img = arr2image(src_db)
+    return img
 
 
 

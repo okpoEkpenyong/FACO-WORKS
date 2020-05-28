@@ -3,9 +3,9 @@ from flask import Flask, flash, render_template, request, redirect, url_for, sen
 from werkzeug.utils import secure_filename
 from werkzeug.middleware.proxy_fix import ProxyFix
 from flask_ngrok import run_with_ngrok
-from utils import get_diagnosis, convert_audio
+from inference import get_diagnosis
 
-ALLOWED_EXTENSIONS = set(['wav', 'aif', 'aiff', 'mp3', 'mpeg', 'mov', 'mid', 'rm', 'ra', 'wma', 'asf', 'amr'])
+ALLOWED_EXTENSIONS = set(['wav'])
 
 app = Flask(__name__)
 run_with_ngrok(app)   
@@ -32,13 +32,8 @@ def upload_file():
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            filename = convert_audio(filename, app.config['UPLOAD_FOLDER'])
-            if filename:
-                return redirect(url_for('diagnosis',
-                                        filename=filename))
-            else:
-                flash('Could not read the file')
-                return redirect(request.url)
+            return redirect(url_for('diagnosis',
+                                    filename=filename))
         else:
             flash('File not allowed')
             return redirect(request.url)
