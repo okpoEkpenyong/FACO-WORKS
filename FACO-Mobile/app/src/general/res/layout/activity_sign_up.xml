@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".doctors.ui.auth.signup.SignUpActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="85dp"
+        android:layout_marginBottom="46dp"
+        android:gravity="center"
+        android:text="@string/sign_up"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textColor="#fff"
+        android:textSize="40sp"
+        app:fontFamily="@font/rubik_bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:text="@string/full_name"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="#fff"
+                android:textSize="22sp"
+                app:fontFamily="@font/rubik_regular" />
+
+            <EditText
+                android:id="@+id/et_fullname"
+                style="@style/AuthInputFieldStyle"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="16dp"
+                android:autofillHints="name, full name"
+                android:hint="e.g. Sam Doe"
+                android:inputType="textCapWords" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:text="@string/phone_number"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="#fff"
+                android:textSize="22sp"
+                app:fontFamily="@font/rubik_regular" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_field_height"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/auth_input_field_background"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp">
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/ccp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/input_field_height"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    app:ccp_autoDetectCountry="true"
+                    app:ccp_contentColor="@color/colorTextBodyGrey"
+                    app:ccp_countryPreference="IN"
+                    app:ccp_hintExampleNumber="true"
+                    app:ccp_textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/et_phone_number"
+                    style="@style/AuthInputFieldStyle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:autofillHints="phone"
+                    android:hint="e.g: +428 678 2929"
+                    android:inputType="phone" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:text="@string/password"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="#fff"
+                android:textSize="22sp"
+                app:fontFamily="@font/rubik_regular" />
+
+            <EditText
+                android:id="@+id/et_password"
+                style="@style/AuthInputFieldStyle"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="58dp"
+                android:autofillHints="password"
+                android:hint="e.g. abcdefghkl"
+                android:inputType="textPassword" />
+
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <Button
+                    android:id="@+id/btn_submit"
+                    style="@style/PrimaryActionButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="@string/btn_submit" />
+
+                <ProgressBar
+                    android:id="@+id/pb_working"
+                    style="@android:style/Widget.ProgressBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="6dp"
+                    android:elevation="20dp"
+                    android:indeterminate="true"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

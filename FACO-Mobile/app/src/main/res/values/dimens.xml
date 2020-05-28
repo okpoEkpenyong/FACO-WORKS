@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="textHeaderOne">36dp</dimen>
+    <dimen name="textHeaderTwo">24dp</dimen>
+    <dimen name="textSubtitle">26dp</dimen>
+    <dimen name="textBody">20dp</dimen>
+    <dimen name="textCaptionMenu">14dp</dimen>
+    <dimen name="onboarding_indicator_regular">8dp</dimen>
+    <dimen name="onboarding_indicator_large">11dp</dimen>
+    <dimen name="input_field_height">52dp</dimen>
+
+
+    <dimen name="action_button_height">53dp</dimen>
+    <dimen name="action_button_text_size">18sp</dimen>
+    <dimen name="input_field_text_size">16sp</dimen>
+</resources>

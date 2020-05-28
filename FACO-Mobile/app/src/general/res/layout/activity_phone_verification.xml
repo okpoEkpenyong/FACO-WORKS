@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".doctors.ui.auth.signup.PhoneVerification">
+
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:gravity="center"
+        android:text="@string/phone_verification_sending_code"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="#fff"
+        android:textSize="22sp"
+        app:fontFamily="@font/rubik_regular" />
+
+    <EditText
+        android:id="@+id/et_code"
+        style="@style/AuthInputFieldStyle"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="16dp"
+        android:autofillHints="otp, code"
+        android:hint="e.g. 123456"
+        android:inputType="number" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/btn_verify"
+            style="@style/PrimaryActionButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/btn_verify" />
+
+        <ProgressBar
+            android:id="@+id/pb_working"
+            style="@android:style/Widget.ProgressBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="6dp"
+            android:elevation="20dp"
+            android:indeterminate="true"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_resend_code_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="@color/grey_20"
+            tools:text="@string/timer_resend_code" />
+
+        <TextView
+            android:id="@+id/tv_resend_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:background="?attr/selectableItemBackground"
+            android:enabled="false"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/action_resend_code"
+            android:textColor="@color/grey_20"
+            android:textSize="20sp"
+            app:fontFamily="@font/rubik_regular" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
