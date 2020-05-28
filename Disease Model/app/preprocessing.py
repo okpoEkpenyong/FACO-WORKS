@@ -13,8 +13,8 @@ def convert_to_spec_image(filename):
     src_db = lb.amplitude_to_db(abs(src_ft))
     specshow(src_db, sr=sr, x_axis='time', y_axis='hz')
     plt.ylim(0, 5000)
-    filename = plt.savefig(filename+ '.png')
-    return filename
+    mel = plt.savefig(filename+ '.png')
+    return mel
 
 
 

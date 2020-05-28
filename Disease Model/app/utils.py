@@ -8,14 +8,13 @@ import os, subprocess
 def get_heartrate(filename, dir):
     """ Read video file and estimate heart rate """
     # Frequency range for Fast-Fourier Transform
-    freq_min = 1
-    freq_max = 1.8
+
 
     # Preprocessing phase
-    hr = -1 # Valor por defecto
+    diagnosis = -1 # Valor por defecto
 
     fn = os.path.join(dir, filename)
-    video_frames, frame_ct, fps = preprocessing.read_video(fn)
+    mel = preprocessing.convert_to_spec_image(fn)
 
     # Build Laplacian video pyramid
 
