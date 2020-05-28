@@ -2,8 +2,6 @@ import librosa as lb
 from librosa.display import specshow
 import matplotlib.pyplot as plt
 
-
-
 def convert_to_spec_image(filename):
 
     y, sr = lb.load(filename)

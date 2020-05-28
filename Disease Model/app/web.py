@@ -3,9 +3,9 @@ from flask import Flask, flash, render_template, request, redirect, url_for, sen
 from werkzeug.utils import secure_filename
 from werkzeug.middleware.proxy_fix import ProxyFix
 from flask_ngrok import run_with_ngrok
-from utils import get_heartrate, convert_vid
+from utils import get_diagnosis, convert_audio
 
-ALLOWED_EXTENSIONS = set(['.wav, .aif, .aiff, mp3, mpeg, mov, mid, rm, ra, wma, asf'])   #, 'mov', 'avi'])
+ALLOWED_EXTENSIONS = set(['wav', 'aif', 'aiff', 'mp3', 'mpeg', 'mov', 'mid', 'rm', 'ra', 'wma', 'asf', 'amr'])
 
 app = Flask(__name__)
 run_with_ngrok(app)   
@@ -34,7 +34,7 @@ def upload_file():
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             filename = convert_audio(filename, app.config['UPLOAD_FOLDER'])
             if filename:
-                return redirect(url_for('show_heartrate',
+                return redirect(url_for('diagnosis',
                                         filename=filename))
             else:
                 flash('Could not read the file')
@@ -45,10 +45,10 @@ def upload_file():
     else:
             return render_template('upload.html')
 
-@app.route('/heartrate/<filename>')
-def show_heartrate(filename):
-    hr, video = get_heartrate(filename, app.config['UPLOAD_FOLDER'])
-    return render_template('results.html', heartrate=str(hr), video=video)
+@app.route('/diagnosis/<filename>')
+def diagnosis(filename):
+    label, probability = get_diagnosis(filename, app.config['UPLOAD_FOLDER'])
+    return render_template('results.html', label=str(c), probability=ps[ind].item())
 
 if __name__ == "__main__":
     app.run()
