@@ -1,4 +1,5 @@
 import librosa as lb
+import sys
 # So we can import from cough_inference
 sys.path.append('../..')
 from cough_inference import arr2image
