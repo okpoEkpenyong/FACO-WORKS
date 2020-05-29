@@ -42,8 +42,8 @@ def upload_file():
 
 @app.route('/diagnosis/<filename>')
 def diagnosis(filename):
-    label, probability = get_diagnosis(filename, app.config['UPLOAD_FOLDER'])
-    return render_template('results.html', label=str(c), probability=ps[ind].item())
+    c, ps = get_diagnosis(filename, app.config['UPLOAD_FOLDER'])
+    return render_template('results.html', label=str(c), probability=ps)
 
 if __name__ == "__main__":
     app.run()

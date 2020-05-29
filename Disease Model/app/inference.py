@@ -10,7 +10,7 @@ def get_diagnosis(filename, dir):
     mel = preprocessing.convert_to_spec_image(fn)
 
     # Deserialize the model
-    mdl = 'covid_vgg19_trained_1.pkl'
+    mdl = 'covid_vgg19_overmixup.pkl'
     lrn = load_learner('.', mdl)
     # Get predictions for the first image
     c, ind, ps = lrn.predict(mel)
