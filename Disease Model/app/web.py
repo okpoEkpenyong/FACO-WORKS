@@ -5,7 +5,7 @@ from werkzeug.middleware.proxy_fix import ProxyFix
 from flask_ngrok import run_with_ngrok
 from inference import get_diagnosis
 
-ALLOWED_EXTENSIONS = set(['wav'])
+ALLOWED_EXTENSIONS = set(['wav', '3gp', 'mp4', 'm4a', 'ts', 'aac', 'flac', 'mid', 'mp3', 'mkv'])
 
 app = Flask(__name__)
 run_with_ngrok(app)   
