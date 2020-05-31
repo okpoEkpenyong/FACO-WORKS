@@ -13,8 +13,10 @@ from fastai.vision.image import Image
 from fastai.basic_train import load_learner
 import torch
 import numpy as np
+from torchvision.transforms import Normalize
+from fastai.vision.data import imagenet_stats
 
-def arr2image(arr):
+def arr2image(arr, do_normalize=False, stats=imagenet_stats):
     """ Converts numpy array to fastai Image with 3 channels """
     # Drop empty dimensions
     data = np.squeeze(arr)
@@ -22,6 +24,10 @@ def arr2image(arr):
     data = torch.from_numpy(data)
     # Stack 3 copies as new channels
     data = torch.stack([data, data, data])
+    # Normalize if necessary
+    if do_normalize:
+        nml = Normalize(stats[0], stats[1])
+        nml(data, inplace=True)
     # return as image
     return Image(data)
 

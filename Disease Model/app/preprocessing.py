@@ -9,7 +9,7 @@ def convert_to_spec_image(filename):
     y, sr = lb.load(filename)
     src_ft = lb.stft(y)
     src_db = lb.amplitude_to_db(abs(src_ft))
-    img = arr2image(src_db)
+    img = arr2image(src_db, do_normalize=True)
     return img
 
 
