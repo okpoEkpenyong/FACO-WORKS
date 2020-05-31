@@ -26,8 +26,8 @@ def arr2image(arr, do_normalize=False, stats=imagenet_stats):
     data = torch.stack([data, data, data])
     # Normalize if necessary
     if do_normalize:
-        nml = Normalize(stats[0], stats[1])
-        nml(data, inplace=True)
+        nml = Normalize(stats[0], stats[1], inplace=True)
+        nml(data)
     # return as image
     return Image(data)
 
