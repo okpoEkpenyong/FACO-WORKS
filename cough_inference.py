@@ -31,7 +31,6 @@ def arr2image(arr, do_normalize=False, stats=imagenet_stats):
     # return as image
     return Image(data)
 
-
 def get_model(model, dir='.'):
     """ exported model file and dir """
     return load_learner(dir, model)
