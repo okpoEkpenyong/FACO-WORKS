@@ -8,5 +8,10 @@ This subdirectory is dedicated to respiratory disease classification
 - The first model produced mediocre results, probably becaue of unbalanced categories, so we tried oversampling techniques, which improved predictions
 - We also deleted category "asthma", which was extremely unbalanced
 - Added new confusion matrix for the improved model
+- "Cough examples" contains cough samples in wav format
 - In folder "app" there's a web app that predicts disease from wav file. You just have to record your coughing and upload your audio file in wav or mp3 format
-- In "Cough examples" folder you can download cough audios in wav format to try the diagnosis prediction web app
+- Just run web.py
+- Dependencies:
+-- fastai
+-- librosa
+-- flask, flask_ngrok
